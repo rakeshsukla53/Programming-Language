@@ -5,35 +5,11 @@ $inputFile=$argv[2];
 $outputFile=$argv[3];
 
 $file = file_get_contents ($inputFile);
-echo $outputFile."\n";
-$finalChr = "";
-echo $inputFile."\n";
 $fhandleout = fopen($outputFile, 'w') or die("File cannot be opened");
-echo $taskNumber."\n";
-$inLength = strlen($file);
+$inLength = strlen($file);  #length of the input characters
+$finalOutput= "";  # final output creation
 
-
-if( $taskNumber == 2)
-{
-    $arr2 = array('a' => 'b', 'c' => 'd', 'e' => 'f', 'g' => 'h', 'i' => 'j', 'k'=>'l', 'm'=>'n');
-    for( $i = 0; $i < $inLength; ++$i )
-    {
-        $value = $file[$i];
-        if (array_key_exists($value, $arr2)) {
-            $finalChr = $finalChr.($arr2[$value]);
-        }
-
-        else {
-            $finalChr = $finalChr.($value);
-        }
-    }
-
-    fwrite($fhandleout, $finalChr);
-
-//    foreach( $arr2 as $key => $key)
-//        fwrite($fhandleout, $value);
-}
-else if($taskNumber == 1)
+if( $taskNumber == 1)
 {
     for( $i = 0; $i < $inLength; ++$i )
     {
@@ -63,10 +39,31 @@ else if($taskNumber == 1)
                 $charNumber = $charNumber - 13;
         }
 
-        $finalChr =  $finalChr.chr($charNumber);
+        $finalOutput=  $finalOutput.chr($charNumber);
     }
-    fwrite($fhandleout, $finalChr);
+    fwrite($fhandleout, $finalOutput);
 
 }
+else if($taskNumber == 2)
+{
+    $arr2 = array('a' => 'b', 'c' => 'd', 'e' => 'f', 'g' => 'h', 'i' => 'j', 'k'=>'l', 'm'=>'n');
+    for( $i = 0; $i < $inLength; ++$i )
+    {
+        $value = $file[$i];
+        if (array_key_exists($value, $arr2)) {
+            $finalOutput= $finalOutput.($arr2[$value]);
+        }
+
+        else {
+            $finalOutput= $finalOutput.($value);
+        }
+    }
+
+    fwrite($fhandleout, $finalOutput);
+
+//    foreach( $arr2 as $key => $key)
+//        fwrite($fhandleout, $value);
+}
+
 ?>
 
