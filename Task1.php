@@ -8,28 +8,30 @@ $file = file_get_contents ($inputFile);
 echo $outputFile."\n";
 $finalChr = "";
 echo $inputFile."\n";
-$fhandleout = fopen($outputFile, 'w') or die("can't open file");
+$fhandleout = fopen($outputFile, 'w') or die("File cannot be opened");
 echo $taskNumber."\n";
 $inLength = strlen($file);
 
 
 if( $taskNumber == 2)
 {
-    $arr2=array('a' => 0, 'b' => 0);
-    echo var_dump($arr2);
+    $arr2 = array('a' => 'b', 'c' => 'd', 'e' => 'f', 'g' => 'h', 'i' => 'j', 'k'=>'l', 'm'=>'n');
     for( $i = 0; $i < $inLength; ++$i )
     {
         $value = $file[$i];
-        if(array_key_exists($value, $arr2))
-            $arr2[$value]= $arr2[$value] + 1;
-        else
-            $arr2[$value] = 1;
+        if (array_key_exists($value, $arr2)) {
+            $finalChr = $finalChr.($arr2[$value]);
+        }
+
+        else {
+            $finalChr = $finalChr.($value);
+        }
     }
 
-    echo var_dump($arr2);
+    fwrite($fhandleout, $finalChr);
 
-    foreach( $arr2 as $key => $value)
-        fwrite($fhandleout, $value);
+//    foreach( $arr2 as $key => $key)
+//        fwrite($fhandleout, $value);
 }
 else if($taskNumber == 1)
 {
