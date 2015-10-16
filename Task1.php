@@ -53,17 +53,14 @@ else if($taskNumber == 2)
         if (array_key_exists($value, $arr2)) {
             $finalOutput= $finalOutput.($arr2[$value]);
         }
-
         else {
             $finalOutput= $finalOutput.($value);
         }
     }
-
     fwrite($fhandleout, $finalOutput);
 
 //    foreach( $arr2 as $key => $key)
 //        fwrite($fhandleout, $value);
 }
-
 ?>
 
