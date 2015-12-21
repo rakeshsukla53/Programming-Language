@@ -126,15 +126,14 @@ Access function for single 1D array
 `address(list[k]) = address (list[lower_bound])
 + ((k-lower_bound) * element_size)`
 
-
+![locate_element](https://github.com/rakeshsukla53/Programming-Language/blob/master/Screenshots_PL/Location_element%20in%202D%20array.png)
 
 Now there are two ways to organize arrays in 2D. Row major and column major 
 
 Row Major - Used in most languages 
 Column Major - Used in Fortran 
 
-
-
+![Matrix](https://github.com/rakeshsukla53/Programming-Language/blob/master/Screenshots_PL/Memory_allocation_in_2D.png)
 
 # Ordinal Types 
 
