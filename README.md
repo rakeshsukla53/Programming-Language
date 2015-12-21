@@ -119,6 +119,48 @@ Java has fixed dynamic heap memory
 
 Python supports `Heap Dynamic`. Storage and subscript of the array is dynamically defined 
 
+# Memory Allocation for 2D arrays
+
+Access function for single 1D array 
+
+`address(list[k]) = address (list[lower_bound])
++ ((k-lower_bound) * element_size)`
+
+
+
+Now there are two ways to organize arrays in 2D. Row major and column major 
+
+Row Major - Used in most languages 
+Column Major - Used in Fortran 
+
+
+
+
+# Ordinal Types 
+
+In computer programming, an ordinal data type is a data type with the property that its values can be counted. That is, the values can be put in a one-to-one correspondence with the positive integers. For example, characters are ordinal because we can call 'A' the first character, 'B' the second, etc. The term is often used in programming for variables that can take one of a finite (often small) number of values. While the values are often implemented as integers (or similar types such as bytes) they are assigned literal names and the programming language (and the compiler for that language) can enforce that variables only be assigned those literals.
+
+    var
+      x: 1..10;
+      y: 'a'..'z';
+
+
+# Simple prolog operations
+
+parent(albert, bob).
+
+?- parent(X, bob)
+* who is the parent of BOB
+
+manager(rakesh, joe).
+
+?- manager(X, joe) 
+
+* who is the manager of joe
+
+
+# 
+
 
 
 
