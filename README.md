@@ -51,3 +51,100 @@ In Perl the implmentation :-
 
     $days = {'Mon' => 1, 'Tues' => 2, 'Wed' => 3, 'Thurs' => 4}
 
+# What is jagged array and its implementation 
+
+    public class Main {
+    
+        public static void main (string[] argv) {
+        
+            int jaggedArray[][] = new int[4][]
+            
+            jaggedArray[0] = new int[10];
+            jaggedArray[1] = new int[5];
+            jaggedArray[2] = new int[4];
+            jaggedArray[3] = new int[3];
+
+# keywords and reserved words
+
+Keywords have a special meaning in a language, and are part of the syntax.
+
+Reserved words are words that cannot be used as identifiers (variables, functions, etc.), because they are reserved by the language.
+
+In practice most keywords are reserved words and vice versa. But because they're two different things it may happen that a keyword is not a reserved word (e.g. a keyword only has meaning in a special context, and can therefore be used as an identifier), or a reserved word is not a keyword (e.g. because it is reserved for future use).
+
+Update: Some examples as given by others that illustrate the distinction:
+
+    In Java, goto is a reserved word but not a keyword (as a consequence, you cannot use it at all)
+    Fortran has no reserved words, all keywords (if, then, etc.) can be used as identifiers
+
+* Keyword: It has some meaning and we can use in program.
+* Reserved word: We can't use in program. They may be used in future. Example: goto
+
+# Temporal Dynamic Scope
+
+
+# Arrays bindings
+
+`Static` - Here the memory is allocated for a variable, and it remains the same throughout the program
+
+Subscript ranges are statically bound and storage allocation is static (before run time)
+
+    static int myarray[3] = {1, 2, 3};
+    
+    advantage - Efficiency no dynamic allocation
+    
+`Fixed Stack-Dynamic`
+
+Subscript ranges are statically bound but the allocation of memory happens at declaration time
+
+    int store[3] = {1, 2, 3}
+
+All the arrays without static modifier are Fixed Stack-Dynamic
+
+`Stack Dynamic` 
+
+Subscript ranges are dynamically bound and storage is also dynamic (done at run-time)
+
+    list: array(1..len) of integers
+    
+`Fixed heap Dynamic`
+
+similar to fixed stack-dynamic: Storage binding is dynamic but fixed after allocation. The memory allocation is done from the heap. 
+
+
+
+
+
+            
+            
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
