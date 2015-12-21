@@ -43,4 +43,11 @@ The evaluation result is then compared with the third operand (i.e., c)
 
 # Associate Array and how are they implemented
 
+Associate arrays are unordered collection of data elements that are indexed by equal number of values called as keys.
+
+    User Defined Keys must be stored
+    
+In Perl the implmentation :-
+
+    $days = {'Mon' => 1, 'Tues' => 2, 'Wed' => 3, 'Thurs' => 4}
 
