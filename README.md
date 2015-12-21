@@ -111,6 +111,14 @@ Subscript ranges are dynamically bound and storage is also dynamic (done at run-
 
 similar to fixed stack-dynamic: Storage binding is dynamic but fixed after allocation. The memory allocation is done from the heap. 
 
+In C/C++, you can use malloc and calloc to assign and free memory
+
+Java has fixed dynamic heap memory
+
+`Heap Dynamic` 
+
+Python supports `Heap Dynamic`. Storage and subscript of the array is dynamically defined 
+
 
 
 
