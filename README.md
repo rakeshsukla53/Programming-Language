@@ -157,15 +157,87 @@ manager(rakesh, joe).
 
 * who is the manager of joe
 
+# Variables in Prolog
 
-# 
+ Variable , _tag , X_526 , List , List24 , _head , Tail , _input and Output are all Prolog variables. 
+
+# Operator Precendence Rules
+
+1 - Parentheses
+2 - Unary Operators
+    ** if your language supports this
+3 - *, /
+4 - +, _
 
 
+# Mixed Mode Type Conversation 
 
+* A mixed-mode expression is one that has operands of different types
 
+* A coercion is an implicit type conversion
 
-            
-            
+* Disadvantage of coercions:
+They decrease in the type error detection ability of the compiler 
+
+* In most languages, all numeric types are coerced in expressions, using widening conversions
+
+# For each loop
+
+`for each` loop is supported by the following languages: Java, Perl, PHP
+
+    var sum = 0;
+    var obj = {prop1: 5, prop2: 13, prop3: 8};
+    
+    for each (var item in obj) {
+      sum += item;
+    }
+    
+    console.log(sum); // logs "26", which is 5+13+8
+                
+# Reading and writing files in Java 
+
+    import java.io.*;
+    
+    public class Test {
+        public static void main(String [] args) {
+    
+            // The name of the file to open.
+            String fileName = "temp.txt";
+    
+            // This will reference one line at a time
+            String line = null;
+    
+            try {
+                // FileReader reads text files in the default encoding.
+                FileReader fileReader = 
+                    new FileReader(fileName);
+    
+                // Always wrap FileReader in BufferedReader.
+                BufferedReader bufferedReader = 
+                    new BufferedReader(fileReader);
+    
+                while((line = bufferedReader.readLine()) != null) {
+                    System.out.println(line);
+                }   
+    
+                // Always close files.
+                bufferedReader.close();         
+            }
+            catch(FileNotFoundException ex) {
+                System.out.println(
+                    "Unable to open file '" + 
+                    fileName + "'");                
+            }
+            catch(IOException ex) {
+                System.out.println(
+                    "Error reading file '" 
+                    + fileName + "'");                  
+                // Or we could just do this: 
+                // ex.printStackTrace();
+            }
+        }
+    }
+
     
     
 
